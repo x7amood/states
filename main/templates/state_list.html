@@ -1,0 +1,14 @@
+{% extends 'base.html %}
+        {% for state in states %}
+
+            <h3>{{ state.name }}</h3>
+            <ul>
+            	{%for city in state.city_set.all%}
+            		<LI>{{city.name}}</LI>
+            	{%endfor%}
+            <ul>
+
+
+        {% endfor %}
+
+      {% endblock %}
